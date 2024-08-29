@@ -1,0 +1,37 @@
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+}
+
+.circle.hidden {
+  opacity: 0;
+  transform: scale(0.5);
+  pointer-events: none;
+  /* Ngăn chặn sự kiện chuột khi vòng tròn ẩn */
+}
+
+.circle.clicked {
+  background-color: red;
+}
+
+.circle:hover {
+  background-color: #e0e0e0;
+  /* Thay đổi màu nền khi di chuột qua */
+  transform: scale(1.1);
+  /* Phóng to vòng tròn khi di chuột qua */
+}
+
+.circle:focus {
+  outline: none;
+  /* Loại bỏ đường viền mặc định khi vòng tròn được chọn */
+}
